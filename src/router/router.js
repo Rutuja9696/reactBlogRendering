@@ -9,7 +9,7 @@ class Router extends Component {
       <div>
         <BrowserRouter>
           <Switch>
-            <Route />
+            <Route path="/blogs" exact component={AllBlogs} />
           </Switch>
         </BrowserRouter>
       </div>
