@@ -1,12 +1,12 @@
 .header {
-  background: rgb(223, 253, 223);
+  background: rgb(238, 247, 238);
   display: flex;
   width: 100%;
   top: 0;
   position: fixed;
   justify-content: space-between;
   flex-wrap: wrap;
-  box-shadow: 0px 0px 5px 0px rgb(98, 236, 117);
+  box-shadow: 0px 0px 15px 0px rgb(142, 196, 149);
   flex: 1 0 25%;
   /* padding: 0 0 0 15%; */
 }
