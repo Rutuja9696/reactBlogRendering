@@ -15,7 +15,7 @@ class Router extends Component {
         <BrowserRouter>
           <Header />
           <Switch>
-            <Route path="/blogs" exact component={AllBlogs} />
+            <Route path="/" exact component={AllBlogs} />
             <Route path="/blogs/:id" exact component={DisplayBlog} />
           </Switch>
         </BrowserRouter>
