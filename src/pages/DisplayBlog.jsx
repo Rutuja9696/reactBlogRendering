@@ -7,6 +7,39 @@ class DisplayBlog extends Component {
     status: "",
     blogId: "",
   };
+  componentDidMount = (event) => {
+    fetch(url + this.props.match.params.id)
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        this.setState({
+          blog: data.data,
+          status: "Successful",
+          blogId: this.props.match.params.id,
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+  //fetch blog by id
+  blogById = (id) => {
+    fetch(url + id)
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        this.setState({
+          blog: data.data,
+          status: "Successful",
+          blogId: id,
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
   render() {
     return (
       <div>
