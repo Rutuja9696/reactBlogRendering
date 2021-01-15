@@ -8,12 +8,15 @@ class AllBlogs extends Component {
     status: "",
   };
   componentDidMount = (event) => {
-    fetch(url)
+    fetch(url, {
+      method: "GET",
+      mode: "cors",
+    })
       .then((response) => {
         return response.json();
       })
       .then((data) => {
-        this.setState({ blogs: data.blogData, status: "Successful" });
+        this.setState({ blogs: data.data, status: "Successful" });
       })
       .catch((err) => {
         console.log(err);
@@ -24,11 +27,11 @@ class AllBlogs extends Component {
       <div>
         <h1>My Blogs</h1>
         <div>
-          {this.state.blogs.map((blog, i) => {
+          {this.state.blogs.map((blog) => {
             return (
               <div key={blog.id}>
                 <Link to={`/blogs/${blog.id}`}>
-                  <AllBlogCards blog={blog} i={i + 1} />
+                  <AllBlogCards blog={blog} />
                 </Link>
               </div>
             );

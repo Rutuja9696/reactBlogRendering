@@ -1,10 +1,15 @@
 import { Component } from "react";
 import { Link } from "react-router-dom";
-import url from "./ApiCall";
 
 class AllBlogCards extends Component {
   render() {
-    return <div></div>;
+    return (
+      <div>
+        <p>{this.props.blog.title}</p>
+        <p>{this.props.blog.author}</p>
+        <img src={this.props.blog.imageUrl} alt="Blog" />
+      </div>
+    );
   }
 }
 export default AllBlogCards;
