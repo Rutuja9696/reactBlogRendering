@@ -40,6 +40,25 @@ class DisplayBlog extends Component {
         console.log(err);
       });
   };
+  componentDidUpdate = (event) => {
+    if (this.state.blogId !== this.props.match.params.id) {
+      if (this.state.status !== "") this.setState({ status: "" });
+      fetch(url + this.props.match.params.id)
+        .then((response) => {
+          return response.json();
+        })
+        .then((data) => {
+          this.setState({
+            blog: data.data,
+            status: "Successful",
+            blogId: data.data.id,
+          });
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }
+  };
   render() {
     return (
       <div>
