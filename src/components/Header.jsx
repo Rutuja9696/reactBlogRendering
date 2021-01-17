@@ -9,6 +9,12 @@ class Header extends Component {
         <div id={headerStyles.logo}>
           <img src={logo} alt="logo" />
         </div>
+        <div>
+          <ul>
+            <li className={headerStyles.list}>Home </li>
+            <li className={headerStyles.list}> Contact Us</li>
+          </ul>
+        </div>
       </div>
     );
   }
