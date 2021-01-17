@@ -13,6 +13,7 @@ class DisplayBlog extends Component {
         return response.json();
       })
       .then((data) => {
+        console.log(data);
         this.setState({
           blog: data.data,
           status: "Successful",
@@ -63,7 +64,12 @@ class DisplayBlog extends Component {
     return (
       <div>
         <h1>display Blog</h1>
-        <Blog />
+        <Blog
+          blog={this.state.blog}
+          status={this.state.status}
+          blogById={this.blogById}
+          {...this.props}
+        />
       </div>
     );
   }
