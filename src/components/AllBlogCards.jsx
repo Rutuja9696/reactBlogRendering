@@ -1,13 +1,18 @@
 import { Component } from "react";
 import { Link } from "react-router-dom";
+import AllBlogsStyles from "../styles/AllBlogs.module.css";
 
 class AllBlogCards extends Component {
   render() {
     return (
-      <div>
-        <p>{this.props.blog.title}</p>
-        <p>{this.props.blog.author}</p>
-        <img src={this.props.blog.imageUrl} alt="Blog" />
+      <div className={AllBlogsStyles.cards}>
+        <img
+          src={this.props.blog.imageUrl}
+          alt="Blog"
+          className={AllBlogsStyles.picture}
+        />
+        <h3 className={AllBlogsStyles.title}>{this.props.blog.title}</h3>
+        <p className={AllBlogsStyles.author}>- {this.props.blog.author}</p>
       </div>
     );
   }

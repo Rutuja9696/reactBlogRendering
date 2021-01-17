@@ -2,6 +2,8 @@ import { Component } from "react";
 import { Link } from "react-router-dom";
 import url from "../components/ApiCall";
 import AllBlogCards from "../components/AllBlogCards";
+
+import AllBlogsStyles from "../styles/AllBlogs.module.css";
 class AllBlogs extends Component {
   state = {
     blogs: [],
@@ -24,8 +26,8 @@ class AllBlogs extends Component {
   };
   render() {
     return (
-      <div>
-        <h1>My Blogs</h1>
+      <div className={AllBlogsStyles.container}>
+        {/* <h1>My Blogs</h1> */}
         <div>
           {this.state.blogs.map((blog) => {
             return (
