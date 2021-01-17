@@ -34,9 +34,21 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### Clone repository
+## Downloading and running the project locally
+
+1.clone the repository using below command (edited)
+
+git clone
 
 frontend: https://github.com/Rutuja9696/reactBlogRendering.git
+
+2.Install node modules using below command
+
+npm i
+
+3.Run the server using below command
+
+npm run start
 
 ### Backend
 
@@ -53,4 +65,4 @@ hosted frontend [link]()
 
 ### Author
 
-Rutuja Patil
+- **Rutuja Patil** - _work by_ - [irutujapatil](https://github.com/Rutuja9696)
