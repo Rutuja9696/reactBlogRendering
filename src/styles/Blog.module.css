@@ -1,0 +1,53 @@
+.container {
+  width: 60%;
+  height: auto;
+  box-shadow: 0px 0px 15px 0px rgb(142, 196, 149);
+  text-align: center;
+  margin: 10% auto;
+  padding: 6px;
+  border-radius: 1%;
+}
+.picture {
+  width: 50%;
+  height: 50%;
+  box-shadow: 0px 0px 45px 0px rgb(137, 145, 138);
+  padding: 1px;
+  border-radius: 2%;
+}
+.title {
+  text-decoration: none;
+  color: rgb(73, 107, 158);
+  font-size: 20px;
+}
+.author {
+  text-decoration: none;
+  color: rgb(22, 189, 240);
+  font-size: 16px;
+}
+.content {
+  color: rgb(40, 60, 66);
+  font-size: 16px;
+  padding: 4px 30px;
+}
+hr {
+  width: 30%;
+  height: 1px;
+  background-color: rgb(53, 240, 253);
+}
+.links {
+  color: rgb(29, 41, 59);
+}
+@media (max-width: 450px) {
+  .title {
+    font-size: 10px;
+  }
+  .author {
+    font-size: 7px;
+  }
+  .content {
+    font-size: 7px;
+  }
+  .links {
+    font-size: 7px;
+  }
+}
