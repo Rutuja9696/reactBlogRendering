@@ -1,6 +1,8 @@
 import { Component } from "react";
 import url from "../components/ApiCall";
-import Blog from "../components/Blog";
+import Blog from "../components/Blog.jsx";
+import BlogStyles from "../styles/Blog.module.css";
+
 class DisplayBlog extends Component {
   state = {
     blog: [],
@@ -15,7 +17,7 @@ class DisplayBlog extends Component {
       .then((data) => {
         console.log(data);
         this.setState({
-          blog: data.data,
+          blog: data.data[0],
           status: "Successful",
           blogId: this.props.match.params.id,
         });
@@ -32,7 +34,7 @@ class DisplayBlog extends Component {
       })
       .then((data) => {
         this.setState({
-          blog: data.data,
+          blog: data.data[0],
           status: "Successful",
           blogId: id,
         });
@@ -50,7 +52,7 @@ class DisplayBlog extends Component {
         })
         .then((data) => {
           this.setState({
-            blog: data.data,
+            blog: data.data[0],
             status: "Successful",
             blogId: data.data.id,
           });
@@ -62,8 +64,7 @@ class DisplayBlog extends Component {
   };
   render() {
     return (
-      <div>
-        <h1>display Blog</h1>
+      <div className={BlogStyles.container}>
         <Blog
           blog={this.state.blog}
           status={this.state.status}
