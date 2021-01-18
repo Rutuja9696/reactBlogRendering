@@ -56,12 +56,13 @@ hosted backend on heroku [link](https://blog-rendering1.herokuapp.com/blogs)
 
 ### Required routes
 
-/ :to display home page with all blogs cards.\
+/blogs :to display home page with all blogs cards.\
 /blogs/:id :to display blog by Id.
+/(random text): to display 404 error page.s
 
 ### Demo
 
-hosted frontend [link]()
+hosted frontend [link](https://react-blog-rendering-lilac.vercel.app/blogs)
 
 ### Author
 
