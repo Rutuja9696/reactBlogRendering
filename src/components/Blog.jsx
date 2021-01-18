@@ -16,12 +16,13 @@ class Blog extends Component {
         <p className={BlogStyles.author}>- {this.props.blog.author}</p>
         <p className={BlogStyles.content}>{this.props.blog.content}</p>
         <hr />
-        <p className={BlogStyles.links}>Related Links:</p>
+        <p className={BlogStyles.linkTitle}>Related Links:</p>
         <div>
           {this.props.blog.links.map((link, i) => {
             return (
               <div key={`${link.id} ${i}`}>
                 <Link
+                  className={BlogStyles.links}
                   to={`/blogs/${link.id}`}
                   onClick={() => this.props.blogById(link.id)}
                 >

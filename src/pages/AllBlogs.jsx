@@ -27,17 +27,22 @@ class AllBlogs extends Component {
   };
   render() {
     return (
-      <div className={AllBlogsStyles.container}>
-        {this.state.blogs.map((blog) => {
-          return (
-            <div key={blog.id}>
-              <Link className={AllBlogsStyles.link} to={`/blogs/${blog.id}`}>
-                <AllBlogCards blog={blog} />
-              </Link>
-            </div>
-          );
-        })}
-      </div>
+      <>
+        <h1 className={AllBlogsStyles.tagline}>
+          Not all those who wander are lost..!
+        </h1>
+        <div className={AllBlogsStyles.container}>
+          {this.state.blogs.map((blog) => {
+            return (
+              <div id={blog.id} key={blog.id} className={AllBlogsStyles.cards}>
+                <Link className={AllBlogsStyles.link} to={`/blogs/${blog.id}`}>
+                  <AllBlogCards blog={blog} />
+                </Link>
+              </div>
+            );
+          })}
+        </div>
+      </>
     );
   }
 }
