@@ -18,9 +18,9 @@ class Blog extends Component {
         <hr />
         <p className={BlogStyles.links}>Related Links:</p>
         <div>
-          {this.props.blog.links.map((link) => {
+          {this.props.blog.links.map((link, i) => {
             return (
-              <div key={`${link.id}`}>
+              <div key={`${link.id} ${i}`}>
                 <Link
                   to={`/blogs/${link.id}`}
                   onClick={() => this.props.blogById(link.id)}
