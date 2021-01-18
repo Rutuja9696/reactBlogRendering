@@ -3,11 +3,9 @@
   width: 100%;
   text-align: center;
   background: rgb(238, 247, 238);
-  position: fixed;
   left: 0;
   bottom: 0;
   right: 0;
-  bottom: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -18,7 +16,9 @@
 ul.contact {
   list-style: none;
 }
-
+.copyRight {
+  font-size: 16px;
+}
 ul.contact li {
   display: inline;
   font-size: 1em;
@@ -32,4 +32,9 @@ ul.contact li span {
 .insta {
   border-radius: 10px;
   color: rgb(3, 67, 87);
+}
+@media (max-width: 450px) {
+  .copyRight {
+    font-size: 10px;
+  }
 }

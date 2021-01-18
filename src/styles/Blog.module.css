@@ -34,8 +34,13 @@ hr {
   height: 1px;
   background-color: rgb(53, 240, 253);
 }
+.linkTitle {
+  color: rgb(57, 224, 127);
+  font-size: 16px;
+}
 .links {
-  color: rgb(29, 41, 59);
+  color: rgb(62, 96, 146);
+  text-decoration: None;
 }
 @media (max-width: 450px) {
   .title {
@@ -46,6 +51,9 @@ hr {
   }
   .content {
     font-size: 7px;
+  }
+  .linkTitle {
+    font-size: 8px;
   }
   .links {
     font-size: 7px;
