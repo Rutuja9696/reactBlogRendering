@@ -1,6 +1,7 @@
 import { Component } from "react";
 import AllBlogsStyles from "../styles/AllBlogs.module.css";
 
+//class component to display all blogs card
 class AllBlogCards extends Component {
   render() {
     return (

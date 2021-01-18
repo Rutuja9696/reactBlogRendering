@@ -3,6 +3,8 @@ import url from "../components/ApiCall";
 import Blog from "../components/Blog.jsx";
 import BlogStyles from "../styles/Blog.module.css";
 import PageNotFound from "../pages/404NotFoundPg";
+
+//class component to display blogById
 class DisplayBlog extends Component {
   state = {
     blog: [],

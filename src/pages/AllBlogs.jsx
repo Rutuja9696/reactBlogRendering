@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import url from "../components/ApiCall";
 import AllBlogCards from "../components/AllBlogCards";
 import AllBlogsStyles from "../styles/AllBlogs.module.css";
+
+//page displaying all blog cards
 class AllBlogs extends Component {
   state = {
     blogs: [],

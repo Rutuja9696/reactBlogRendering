@@ -2,11 +2,11 @@ import { Component } from "react";
 import { Link } from "react-router-dom";
 import BlogStyles from "../styles/Blog.module.css";
 
+//markup of blog
 class Blog extends Component {
   render() {
     return (
       <div className={BlogStyles.cards}>
-        {/* <h1>blog</h1> */}
         <h2 className={BlogStyles.title}>{this.props.blog.title}</h2>
         <img
           src={this.props.blog.imageUrl}
