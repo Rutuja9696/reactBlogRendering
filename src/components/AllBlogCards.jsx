@@ -1,5 +1,4 @@
 import { Component } from "react";
-import { Link } from "react-router-dom";
 import AllBlogsStyles from "../styles/AllBlogs.module.css";
 
 class AllBlogCards extends Component {

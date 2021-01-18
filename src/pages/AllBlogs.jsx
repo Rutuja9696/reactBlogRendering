@@ -2,7 +2,6 @@ import { Component } from "react";
 import { Link } from "react-router-dom";
 import url from "../components/ApiCall";
 import AllBlogCards from "../components/AllBlogCards";
-
 import AllBlogsStyles from "../styles/AllBlogs.module.css";
 class AllBlogs extends Component {
   state = {
@@ -27,18 +26,15 @@ class AllBlogs extends Component {
   render() {
     return (
       <div className={AllBlogsStyles.container}>
-        {/* <h1>My Blogs</h1> */}
-        <div>
-          {this.state.blogs.map((blog) => {
-            return (
-              <div key={blog.id}>
-                <Link to={`/blogs/${blog.id}`}>
-                  <AllBlogCards blog={blog} />
-                </Link>
-              </div>
-            );
-          })}
-        </div>
+        {this.state.blogs.map((blog) => {
+          return (
+            <div key={blog.id}>
+              <Link className={AllBlogsStyles.link} to={`/blogs/${blog.id}`}>
+                <AllBlogCards blog={blog} />
+              </Link>
+            </div>
+          );
+        })}
       </div>
     );
   }

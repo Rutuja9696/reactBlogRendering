@@ -1,4 +1,5 @@
 import { Component } from "react";
+import { Link } from "react-router-dom";
 import BlogStyles from "../styles/Blog.module.css";
 
 class Blog extends Component {
@@ -16,7 +17,20 @@ class Blog extends Component {
         <p className={BlogStyles.content}>{this.props.blog.content}</p>
         <hr />
         <p className={BlogStyles.links}>Related Links:</p>
-        <div></div>
+        <div>
+          {this.props.blog.links.map((link) => {
+            return (
+              <div key={`${link.id}`}>
+                <Link
+                  to={`/blogs/${link.id}`}
+                  onClick={() => this.props.blogById(link.id)}
+                >
+                  <p>{link.title}</p>
+                </Link>
+              </div>
+            );
+          })}
+        </div>
       </div>
     );
   }
